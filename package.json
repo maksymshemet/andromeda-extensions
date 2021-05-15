@@ -1,0 +1,14 @@
+{
+	"name": "com.darkdynamic.andromeda.extensions",
+	"displayName": "Andromeda Extensions",
+	"version": "1.0.0",
+    "unity": "2019.3",
+    "description": "The package contains a collection of useful extension methods, for various classes.",
+    "keywords": ["Dark Dynamics", "Andromeda", "Extension"],
+    "category": "Framework",
+    "dependencies": { },
+    "author": {
+      "name": "Maksym Shemet",
+      "email": "shemet.max92@gmail.com"
+    }
+}
