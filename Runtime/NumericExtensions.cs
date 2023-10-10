@@ -1,4 +1,5 @@
-namespace DarkDynamics.Andromeda.Extensions
+// ReSharper disable once CheckNamespace
+namespace DarkDynamics.Andromeda.Extensions.Runtime
 {
     public static class NumericExtensions
     {
@@ -10,5 +11,13 @@ namespace DarkDynamics.Andromeda.Extensions
 
         public static bool ApproximatelyEqualsTo(this double source, double value, double delta) => 
             source - delta <= value && source + delta >= value;
+        
+        public static bool IsBetween(this float @this, float start, float end, bool inclusive = false)
+        {
+            if(inclusive)
+                return start <= @this && @this >= end;
+            else
+                return start < @this && @this > end;
+        }
     }
 }

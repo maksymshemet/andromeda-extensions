@@ -1,8 +1,10 @@
 using System.Diagnostics.CodeAnalysis;
 using UnityEngine;
 
-namespace DarkDynamics.Studio.Andromeda.Extensions
+// ReSharper disable once CheckNamespace
+namespace DarkDynamics.Andromeda.Extensions.Runtime
 {
+    [SuppressMessage("ReSharper", "MemberCanBePrivate.Global")]
     public static class LayerMaskExtensions
     {
         public static int ToLayerNumber(this LayerMask layerMask)

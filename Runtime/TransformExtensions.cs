@@ -1,18 +1,12 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 using UnityEngine;
 
-namespace DarkDynamics.Andromeda.Extensions
+// ReSharper disable once CheckNamespace
+namespace DarkDynamics.Andromeda.Extensions.Runtime
 {
     [SuppressMessage("ReSharper", "MemberCanBePrivate.Global")]
     public static class TransformExtensions
     {
-        public static void Sync(this Transform transform, Transform source, bool includeLocalScale = false)
-        {
-            transform.SyncPosition(source);
-            transform.SyncRotation(source);
-            if(includeLocalScale)
-                transform.SyncLocalScale(source);
-        }
         public static void SyncPosition(this Transform transform, Transform source) => 
             transform.position = source.position;
 
@@ -24,42 +18,42 @@ namespace DarkDynamics.Andromeda.Extensions
 
         public static void SetPositionY(this Transform transform, float value)
         {
-            var v = transform.position;
+            Vector3 v = transform.position;
             v.y = value;
             transform.position = v;
         }
         
         public static void SetPositionX(this Transform transform, float value)
         {
-            var v = transform.position;
+            Vector3 v = transform.position;
             v.x = value;
             transform.position = v;
         }
         
         public static void SetPositionZ(this Transform transform, float value)
         {
-            var v = transform.position;
+            Vector3 v = transform.position;
             v.z = value;
             transform.position = v;
         }
         
         public static void SetLocalPositionY(this Transform transform, float value)
         {
-            var v = transform.localPosition;
+            Vector3 v = transform.localPosition;
             v.y = value;
             transform.localPosition = v;
         }
         
         public static void SetLocalPositionX(this Transform transform, float value)
         {
-            var v = transform.localPosition;
+            Vector3 v = transform.localPosition;
             v.x = value;
             transform.localPosition = v;
         }
         
         public static void SetLocalPositionZ(this Transform transform, float value)
         {
-            var v = transform.localPosition;
+            Vector3 v = transform.localPosition;
             v.z = value;
             transform.localPosition = v;
         }
